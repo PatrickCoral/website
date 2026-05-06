@@ -19,16 +19,31 @@
             <img src="icons/Windows_95_close_window_icon.svg" alt="" class="clickable">
         </div>
         <div class="window-body">
-            <h1>Hello</h1>
+            <!-- Page contents -->
+            <h1>Hello, I'm <a href="http://www.yocus.ch/" class="h-card" rel="me">Yocus</a></h1>
             <p id="lorem"></p>
         </div>
     </div>
+
+    <!-- Footer and start menu -->
+    <div id="menu" class="window hidden">
+        <a href="https://github.com/PatrickCoral" rel="me" class="menu-element">
+            <img src="icons/GitHub_Invertocat_Black.png" alt="">
+            <span>Github</span>
+        </a>
+        <a href="https://github.com/PatrickCoral" rel="me" class="menu-element">
+            <img src="icons/GitHub_Invertocat_Black.png" alt="">
+            <span>Github</span>
+        </a>
+        <a href="https://github.com/PatrickCoral" rel="me" class="menu-element">
+            <img src="icons/GitHub_Invertocat_Black.png" alt="">
+            <span>Github</span>
+        </a>
+    </div>
     <footer class="window">
-        <img src="icons/start.png" class="clickable" style="height: 3vh;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti dicta error nemo alias amet quidem,
-        officiis accusamus labore fuga, maiores ipsa facilis debitis laboriosam vero accusantium nisi eaque cum?
-        <div id="contacts">
-            <a href="https://github.com/PatrickCoral" rel="me">Github</a>
+        <img src="icons/start.png" class="window clickable" style="height: 100%;" onclick="openMenu()">
+        <div id="nav">
+            <a href="google.com" class="window">Other page (WIP)</a>
         </div>
     </footer>
 </body>
