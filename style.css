@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
+
+:root {
+    --window-menu-color: #000082;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+    font-family: "Google Sans Code", monospace;
+}
+
+body {
+    height: 100%;
+    padding-top: .1px;
+
+    background: #ffd83d;
+    background: linear-gradient(0deg, rgba(255, 216, 61, 1) 0%, rgba(210, 70, 252, 1) 19%, rgba(138, 84, 255, 1) 50%, rgba(0, 14, 87, 1) 100%);
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.frame {
+    width: 50%;
+    margin: auto;
+    margin-top: 20vh;
+    padding: 5px;
+
+    /* border: solid white; */
+    display: flex;
+    flex-direction: column;
+}
+
+.window {
+    box-shadow: inset -2px -2px 0px 0px #000000, inset 2px 2px 0px 0px #C3C3C3, inset -5px -5px 0px 0px #828282, inset 5px 5px 0px 0px #FFFFFF;
+    background: #C3C3C3;
+}
+
+.window-menu {
+    height: 2em;
+    padding-left: .5em;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+    background-color: var(--window-menu-color);
+}
+
+.window-menu img {
+    height: 90%;
+}
+
+.window-body {
+    padding: 1em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 1em 10vw;
+    width: 100vw;
+
+    background-color: #000082;
+
+    font-size: small;
+}
