@@ -7,10 +7,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     height: 100vh;
+    width: 100vw;
     font-family: "Google Sans Code", monospace;
 }
 
@@ -62,11 +64,26 @@ img {
     padding: 1em;
 }
 
+.clickable:hover {
+    cursor: pointer;
+}
+
+#contacts {
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 footer {
     position: absolute;
     bottom: 0;
-    padding: 1em 10vw;
+    padding: .5em;
     width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     background-color: #000082;
 
