@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yocus">
+    <meta name="description" content="Yocus' playground">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 
@@ -11,19 +13,31 @@
 </head>
 
 <body>
+    <header>
+        <h1>Yocus' nook</h1>
+    </header>
     <script src="index.js"></script>
-    <div class="frame window">
-        <div class="window-menu">
+    <div id="background"></div>
+    </div>
+    <main class="window">
+        <div class="topbar">
             <h2>Welcome</h2>
             <span style="flex-grow: 1;"></span>
-            <img src="icons/Windows_95_close_window_icon.svg" alt="" class="clickable">
+            <a href="http://google.com" style="height: 100%;"><img src="icons/Windows_95_close_window_icon.svg"
+                    alt="" /></a>
         </div>
-        <div class="window-body">
+        <div id="window-body">
             <!-- Page contents -->
-            <h1>Hello, I'm <a href="http://www.yocus.ch/" class="h-card" rel="me">Yocus</a></h1>
-            <p id="lorem"></p>
+            <article class="h-entry post">
+                <h1 class="p-name">Advent</h1>
+                <p class="e-content">The first ever post.</p>
+                <p class="date">
+                    Published by <a href="https://www.yocus.ch/" class="p-author h-card">Yocus</a> on <time
+                        class="dt-published" datetime="2026-05-07T00:00:00">the 7<sup>th</sup> of May 2026</time>
+                </p>
+            </article>
         </div>
-    </div>
+    </main>
 
     <!-- Footer and start menu -->
     <div id="menu" class="window hidden">
@@ -31,20 +45,13 @@
             <img src="icons/GitHub_Invertocat_Black.png" alt="">
             <span>Github</span>
         </a>
-        <a href="https://github.com/PatrickCoral" rel="me" class="menu-element">
-            <img src="icons/GitHub_Invertocat_Black.png" alt="">
-            <span>Github</span>
-        </a>
-        <a href="https://github.com/PatrickCoral" rel="me" class="menu-element">
-            <img src="icons/GitHub_Invertocat_Black.png" alt="">
-            <span>Github</span>
-        </a>
     </div>
     <footer class="window">
         <img src="icons/start.png" class="window clickable" style="height: 100%;" onclick="openMenu()">
-        <div id="nav">
-            <a href="google.com" class="window">Other page (WIP)</a>
-        </div>
+        <nav>
+            <a href="http://google.com" class="window">Other page (WIP)</a>
+        </nav>
+        <a href="https://yocus.ch"><img style="height: 100%;" src="images/button.png" alt="" rel="me"></a>
     </footer>
 </body>
 

@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: justify;
 }
 
 html {
@@ -22,6 +23,23 @@ body {
 
     background: #ffd83d;
     background: linear-gradient(0deg, rgba(255, 216, 61, 1) 0%, rgba(210, 70, 252, 1) 19%, rgba(138, 84, 255, 1) 50%, rgba(0, 14, 87, 1) 100%);
+    background-attachment: fixed;
+}
+
+#background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -999;
+    background-image: url("images/stars.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    position: absolute;
+    padding: 2em;
+    color: white;
 }
 
 img {
@@ -29,10 +47,9 @@ img {
     max-width: 100%;
 }
 
-.frame {
+main {
     width: 50%;
-    margin: auto;
-    margin-top: 20vh;
+    margin: 10vh auto 10vh;
     padding: 5px;
 
     /* border: solid white; */
@@ -40,12 +57,22 @@ img {
     flex-direction: column;
 }
 
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.date {
+    text-align: end;
+}
+
 .window {
     box-shadow: inset -2px -2px 0px 0px #000000, inset 2px 2px 0px 0px #C3C3C3, inset -5px -5px 0px 0px #828282, inset 5px 5px 0px 0px #FFFFFF;
     background: #C3C3C3;
 }
 
-.window-menu {
+.topbar {
     height: 2em;
     padding-left: .5em;
 
@@ -53,14 +80,16 @@ img {
     align-items: center;
 
     color: white;
-    background-color: var(--window-menu-color);
+    /* background-color: var(--window-menu-color); */
+    background: #d246fc;
+    background: linear-gradient(185deg, rgba(210, 70, 252, 1) 0%, rgba(79, 28, 189, 1) 100%);
 }
 
-.window-menu img {
-    height: 90%;
+.topbar img {
+    height: 100%;
 }
 
-.window-body {
+#window-body {
     padding: 1em;
 }
 
@@ -69,7 +98,7 @@ img {
 }
 
 #menu {
-    position: absolute;
+    position: fixed;
     bottom: 4vh;
     width: 10vw;
 
@@ -99,7 +128,8 @@ img {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
+    left: 0;
     bottom: 0;
     padding: .5em;
     width: 100vw;
@@ -115,15 +145,20 @@ footer {
     font-size: small;
 }
 
-#nav {
+nav {
+    flex: 1;
     height: 100%;
     display: flex;
 }
 
-#nav a {
-    width: 10vw;
-    min-width: 15em;
+nav>a {
     padding: 0 1em;
+    min-width: 15em;
+    width: 10vw;
+}
+
+footer a {
+    height: 100%;
 
     display: flex;
     align-items: center;
